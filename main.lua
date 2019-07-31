@@ -7,6 +7,7 @@
 --
 
 require 'battlefield'
+require 'unit'
 
 function love.load()
     id = battlefield.map[5][5]
@@ -16,6 +17,7 @@ function love.draw()
     love.graphics.setBackgroundColor(1,0.5,0.2,0)
     battlefield.todraw()
     battlefield.current_tile()
+    unit.drawUnitPosition()
 end
 
 function love.keyreleased(key)
@@ -23,4 +25,3 @@ function love.keyreleased(key)
         love.event.quit();
     end
 end
-
